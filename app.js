@@ -223,5 +223,4 @@ function checkOnlyOne(element) {
   });
 
   element.checked = true;
-  check = true;
 }
