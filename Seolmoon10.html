@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Q10</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Jua', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="Seolmoon.css">
+</head>
+<body>
+    <div class="main_box">
+        <div class="top_box">
+            <p>MBTI별 추천 직업</p>
+        </div>
+        <div class="question_box">Q10. 오늘은 과제 발표날! 친구가 밤새서 준비하느라 드라이샴푸로 머리 감았다고 이야기합니다. 이때 당신의 대답은?</div>
+
+        <form>
+            <div class="answer_box">
+                <script>
+                    var check = false;
+                    var page = 10;
+                </script>
+                    <input class="answer" type="button" value="A1. 많이 피곤하겠다 준비는 잘 했어??" onclick='localStorage.setItem("question1", 1);check = true;'>
+                    <input class="answer" type = "button" value="A2. 오 드라이 샴푸 어때 좋아??" onclick='localStorage.setItem("question1", 2);check = true;'>
+                <div class="button_box">
+                    <input class="prev_button" type="button" value="Prev" onclick='if(check != true){alert("please select the option");}else{location.href=`./Seolmoon${page - 1}.html`}'>
+                    <input class="next_button" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href=`Seolmoon${page + 1}.html`}'>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Q6</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Jua', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="Seolmoon.css">
+</head>
+<body>
+    <div class="main_box">
+        <div class="top_box">
+            <p>MBTI별 추천 직업</p>
+        </div>
+        <div class="question_box">Q6. 오랜만에 만난 친구가 어제 우울한 일이 있어서 화분 하나 샀다고 말합니다. 이때 당신은?</div>
+
+        <form>
+            <div class="answer_box">
+                <script>
+                    var check = false;
+                    var page = 6;
+                </script>
+                    <input class="answer" type="button" value="A1. 왜 우울해? 무슨 일 있었어?" onclick='localStorage.setItem("question1", 1);check = true;'>
+                    <input class="answer" type = "button" value="A2. 우울할 때 화분을 사면 괜찮아져? 무슨 화분 샀는데?" onclick='localStorage.setItem("question1", 2);check = true;'>
+                <div class="button_box">
+                    <input class="prev_button" type="button" value="Prev" onclick='if(check != true){alert("please select the option");}else{location.href=`./Seolmoon${page - 1}.html`}'>
+                    <input class="next_button" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href=`Seolmoon${page + 1}.html`}'>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>

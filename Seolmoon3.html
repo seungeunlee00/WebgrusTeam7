@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Q3</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Jua', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="Seolmoon.css">
+</head>
+<body>
+    <div class="main_box">
+        <div class="top_box">
+            <p>MBTI별 추천 직업</p>
+        </div>
+        <div class="question_box"> Q3. 열심히 한 과제를 선생님께 보내 피드백을 받았다. 당신이 들었을 때 더 기분좋은 피드백은?</div>
+
+        <form>
+            <div class="answer_box">
+                <script>
+                    var check = false;
+                    var page = 3;
+                </script>
+                    <input class="answer" type="button" value="A1. 열심히 했네~ 고생했어~" onclick='localStorage.setItem("question1", 1);check = true;'>
+                    <input class="answer" type = "button" value="A2. 잘했어~ 이 부분은 약간 수정하면 훨씬 좋겠다~" onclick='localStorage.setItem("question1", 2);check = true;'>
+                <div class="button_box">
+                    <input class="prev_button" type="button" value="Prev" onclick='if(check != true){alert("please select the option");}else{location.href=`./Seolmoon${page - 1}.html`}'>
+                    <input class="next_button" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href=`Seolmoon${page + 1}.html`}'>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
