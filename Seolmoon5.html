@@ -26,8 +26,8 @@
                     var check = false;
                     var page = 5;
                 </script>
-                    <input class="answer" type="button" value="A1. 피곤하지만 알람을 끄고 일어난다" onclick='localStorage.setItem("question1", 1);check = true;'>
-                    <input class="answer" type = "button" value="A2. 알람을 무시하고 다시 잔다" onclick='localStorage.setItem("question1", 2);check = true;'>
+                    <input class="answer" type="button" value="A1. 피곤하지만 알람을 끄고 일어난다" onclick='localStorage.setItem("question5", 1);check = true;'>
+                    <input class="answer" type = "button" value="A2. 알람을 무시하고 다시 잔다" onclick='localStorage.setItem("question5", 2);check = true;'>
                 <div class="button_box">
                     <input class="prev_button" type="button" value="Prev" onclick='if(check != true){alert("please select the option");}else{location.href=`./Seolmoon${page - 1}.html`}'>
                     <input class="next_button" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href=`Seolmoon${page + 1}.html`}'>

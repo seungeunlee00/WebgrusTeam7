@@ -26,8 +26,8 @@
                     var check = false;
                     var page = 6;
                 </script>
-                    <input class="answer" type="button" value="A1. 왜 우울해? 무슨 일 있었어?" onclick='localStorage.setItem("question1", 1);check = true;'>
-                    <input class="answer" type = "button" value="A2. 우울할 때 화분을 사면 괜찮아져? 무슨 화분 샀는데?" onclick='localStorage.setItem("question1", 2);check = true;'>
+                    <input class="answer" type="button" value="A1. 왜 우울해? 무슨 일 있었어?" onclick='localStorage.setItem("question6", 1);check = true;'>
+                    <input class="answer" type = "button" value="A2. 우울할 때 화분을 사면 괜찮아져? 무슨 화분 샀는데?" onclick='localStorage.setItem("question6", 2);check = true;'>
                 <div class="button_box">
                     <input class="prev_button" type="button" value="Prev" onclick='if(check != true){alert("please select the option");}else{location.href=`./Seolmoon${page - 1}.html`}'>
                     <input class="next_button" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href=`Seolmoon${page + 1}.html`}'>
