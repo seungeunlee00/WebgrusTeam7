@@ -1,0 +1,22 @@
+#sub {
+    font-size:25px;
+    text-align: center;
+    font-weight: normal;
+    margin-top:60px;
+}
+
+#mbti {
+    font-size:35px;
+    color:rgba(252, 237, 33, 0.877);
+    text-align:center;
+    margin-top:0;   
+} 
+
+a {
+    color:rgba(252, 237, 33, 0.877);
+
+}
+
+#next {
+    text-align:right;
+}
