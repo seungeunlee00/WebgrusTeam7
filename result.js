@@ -2,6 +2,7 @@
 temp = location.href.split("?");
 mbti = temp[1];
 
+document.getElementById("hiddenMbti").value = mbti;
 console.log(mbti);
 
 var mbti16 = ["ISFJ","ISFP","ISTJ","ISTP","INFJ","INFP","INTJ","INTP",
@@ -66,31 +67,31 @@ INTJ = {sub: "용의주도한 전략가",
     explain: "외향적이고 감정이 잘 드러나 직설적인 언어로 표현하곤 합니다. 모든것이 제자리에 있어야하고 계획이 틀어지는 것을 싫어합니다. 창의력이 다소 부족하지만 목표지향적이고, 자기 관리가 매우 철저한 점이 특징입니다. "
     ,
     job: ["보험 영업 사원","약사","변호사","판사","프로젝트 매니저"]};
- 
+
  ESFP= {sub: "자유로운 영혼의 연예인",
     myMbti: "ESFP",
     explain: "정이 많고 낙천적인 유형입니다. 다같이 모인 자리에서 분위기를 즐겁고 신나게 만드는 분위기 메이커이고, 사교적이고 활동적인 성격으로 어떤 상황이든 잘 적응합니다. 주위 사람들에게 관심이 매우 많고 사물을 다루는 상식이 풍부합니다. "
     ,
     job: ["아동 복지 상담사","주치의","배우","인테리어 디자이너","환경 과학자"]};
- 
+
  ENTP= {sub: "뜨거운 논쟁을 즐기는 변론가",
     myMbti: "ENTP",
     explain: "지식 추구에 대한 열망이 강해 박식하고 창의력이 풍부하기 때문에 안목이 넓고 다방면에 관심과 재능이 많습니다. 새로운 일을 시도하는 솔선력이 강하고 논리적이라 어떤 문제에 대한 해결 능력이 뛰어납니다. 사람들의 동향에도 관심이 많습니다. "
     ,
     job: ["기업가","부동산 개발자","광고 디렉터","마케팅 디렉터","정치인"]};
-    
+
  ESTP= {sub: "모험을 즐기는 사업가",
     myMbti: "ESTP",
     explain: "객관적이고 논리적인 성격을 가져 현실 감각이 강하며 타협책을 모색하고 문제를 해결하는 능력이 뛰어납니다. 센스가 탁월해 어디서든 잘 적응하고, 긴 설명보단 오감으로 보고 듣고 만질 수 있는 삶의 모든 것을 즐깁니다. "
     ,
     job: ["탐정","은행원","투자자","엔터테인먼트 회사원","스포츠 코치"]};
-  
+
  ENTJ= {sub: "대담한 통솔자",
     myMbti: "ENTJ",
     explain: "열정적이며 자기 주장이 강해 지도력과 통솔력이 뛰어납니다. 효율성을 중요시하여 일처리가 신속하고 정확합니다. 공감능력이 조금 부족하고 감정 표현에 솔직합니다. 또한 자존감, 자기애가 굉장히 높은 mbti 중 하나입니다. "
     ,
     job: ["경영진","변호사","시장 조사 분석가","경영 상담가","벤처 투자가"]};
-    
+
  ENFP= {sub: "재기발랄한 활동가",
     myMbti: "ENFP",
     explain: "따뜻하고 활기차며 재능이 많고 상상력이 풍부합니다. 다소 충동적인 경향이 있지만 항상 새로운 가능성을 찾고 문제 해결 능력이 좋아 관심있는 일은 뭐든지 해냅니다. 사람들을 잘 다루고 뛰어난 통찰력으로 도움을 주기도 합니다. "
@@ -102,12 +103,12 @@ INTJ = {sub: "용의주도한 전략가",
     explain: "따뜻하고 적극적이며, 사교성이 풍부하고 동정심이 많습니다. 이타적인 성향이 매우 강해 화합을 중요시하고, 타인의 반응에 예민해 부드러운 대화를 유도하기도 합니다. 미래의 가능성을 추구하며 편안하게 계획을 제시하고 집단을 이끌어 나가는 리더쉽이 있습니다. "
     ,
     job: ["광고 집행자","홍보 전문가","트레이너","영업 담당자","고용/인사 전문가"]};
- 
 
 
 
-var getmbti = [ ISFJ ,ISFP,ISTJ,ISTP,INFJ,INFP,INTJ,INTP,ESFJ,ESFP,ESTJ,ESTP,ENFJ,ENFP,ENTJ,ENTP];
-    
+
+var getmbti = [ISFJ,ISFP,ISTJ,ISTP,INFJ,INFP,INTJ,INTP,ESFJ,ESFP,ESTJ,ESTP,ENFJ,ENFP,ENTJ,ENTP];
+
 
 
 const sub = document.querySelector("#sub");
@@ -115,27 +116,51 @@ const myMbti = document.querySelector("#mbti");
 const explain = document.querySelector("#explain");
 const job = document.querySelectorAll("label");
 
+
+// 초기화 영역
 for(var i=0;i<16;i++) {
     if (mbti === mbti16[i]) {
-    sub.innerText = getmbti[i].sub;
-    myMbti.innerText = getmbti[i].myMbti;
-    explain.innerText = getmbti[i].explain;
-         for(var j=0;j<5;j++) { 
-           $(job[j]).text(getmbti[i].job[j]);
-            document.getElementsByName("job")[j].value = getmbti[i].job[j];
-          
-        }
-    } 
-}
-function check(box) {
-   if(box.checked == true) {
-      document.getElementById('hiddenJob').value = box.value; 
-   }
+      sub.innerText = getmbti[i].sub;
+      myMbti.innerText = mbti;
+      explain.innerText = getmbti[i].explain;
+      alert(".");
+           for(var j=0;j<5;j++) {
+             $(job[j]).text(getmbti[i].job[j]);
+              document.getElementsByName("job")[j].value = getmbti[i].job[j];
+
+          }
+      }
 }
 
 
 
 
-document.getElementById('hiddenMbti').value = mbti;
+// 체크박스 하나만 체크
+function checkOnlyOne(element) {
 
+  const checkboxes
+      = document.getElementsByName("job");
 
+  // 다른 체크박스들 모두 초기
+  checkboxes.forEach((cb) => {
+    cb.checked = false;
+  })
+  // 선택된 체크박스만 true로 Modify
+  element.checked = true;
+}
+
+// submit 전 체크
+function submit_available(){
+  console.log();
+  const checkboxes
+      = document.getElementsByName("job");
+
+  checkboxes.forEach((cb) => {
+      if(cb.checked = true){ // submit 조건 성립
+        document.getElementById("hiddenJob").value = cb.value.replace(" ", "");
+        return true;
+      }
+      })
+      alert("마음에 드시는 직업을 하나 선택해주세요!");
+      return false;
+}
