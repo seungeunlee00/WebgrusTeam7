@@ -72,8 +72,8 @@
 
     <table>
         <th>NO.</th>
-        <th>Name</th>
-        <th>Value</th>
+        <th>직업</th>
+        <th>비율</th>
 <?php
 
   	$i = 1;
