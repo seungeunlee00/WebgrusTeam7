@@ -2,6 +2,7 @@
 temp = location.href.split("?");
 mbti = temp[1];
 
+
 document.getElementById("hiddenMbti").value = mbti;
 console.log(mbti);
 
@@ -123,12 +124,13 @@ for(var i=0;i<16;i++) {
       sub.innerText = getmbti[i].sub;
       myMbti.innerText = mbti;
       explain.innerText = getmbti[i].explain;
-      alert(".");
+     
            for(var j=0;j<5;j++) {
              $(job[j]).text(getmbti[i].job[j]);
               document.getElementsByName("job")[j].value = getmbti[i].job[j];
-
+		
           }
+	    break;
       }
 }
 
@@ -147,20 +149,28 @@ function checkOnlyOne(element) {
   })
   // 선택된 체크박스만 true로 Modify
   element.checked = true;
+ 
 }
 
 // submit 전 체크
-function submit_available(){
-  console.log();
+function check(){
   const checkboxes
       = document.getElementsByName("job");
-
+ check_var = false;
   checkboxes.forEach((cb) => {
-      if(cb.checked = true){ // submit 조건 성립
-        document.getElementById("hiddenJob").value = cb.value.replace(" ", "");
-        return true;
+      if(cb.checked == true){ // submit 조건 성립
+	str = cb.value.replace(/\s+/g, '');
+        document.getElementById("hiddenJob").value = str;
+        check_var = true;
       }
+	  
       })
-      alert("마음에 드시는 직업을 하나 선택해주세요!");
-      return false;
+	if(check_var == false){
+		alert("마음에 드시는 직업을 하나 선택해주세요!");
+		return false;
+	}
+	else{
+		return true;
+	}
+      	
 }

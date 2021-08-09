@@ -36,10 +36,10 @@
 
 
         <!-- 사용자의 MBTI 결과와 선택된 직업값 넘겨주기 위한 form 태그 -->
-      	<form  method="GET" action="connect.php" onsubmit="return submit();">
+      	<form  method="GET" onsubmit='return check();' action="connect.php">
            <input type="hidden" name="hiddenMbti" id="hiddenMbti" value="mbti">
            <input type="hidden" name="hiddenJob" id="hiddenJob" value= "job">
-           <input type="submit" class="NextButton" value="통계 보기" />
+           <input type="submit" class="NextButton" value="통계 보기"/>
        </form>
 
 
