@@ -28,6 +28,7 @@
                 </script>
                     <input class="answer" type="button" value="A1. 열심히 했네~ 고생했어~" onclick='localStorage.setItem("question3", 1);check = true;'>
                     <input class="answer" type = "button" value="A2. 잘했어~ 이 부분은 약간 수정하면 훨씬 좋겠다~" onclick='localStorage.setItem("question3", 2);check = true;'>
+                    <script src="./Seolmoon.js"></script>
                 <div class="button_box">
                     <input class="prev_button" type="button" value="Prev" onclick='if(check != true){alert("please select the option");}else{location.href=`./Seolmoon${page - 1}.html`}'>
                     <input class="next_button" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href=`Seolmoon${page + 1}.html`}'>

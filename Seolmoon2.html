@@ -28,6 +28,7 @@
                 </script>
                     <input class="answer" type="button" value="A1. XX일 X시에 만나서 XX에 가자" onclick='localStorage.setItem("question2", 1);check = true;'>
                     <input class="answer" type = "button" value="A2. X주 쯤에 볼까? 하고 약속이 임박하면 세부약속을 잡는다" onclick='localStorage.setItem("question2", 2);check = true;'>
+                    <script src="./Seolmoon.js"></script>
                 <div class="button_box">
                     <input class="prev_button" type="button" value="Prev" onclick='if(check != true){alert("please select the option");}else{location.href=`./Seolmoon${page - 1}.html`}'>
                     <input class="next_button" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href=`Seolmoon${page + 1}.html`}'>

@@ -60,3 +60,8 @@ body{
     margin-top: 115px;
     padding: 15px 30px;
 }
+
+.clicked {
+    background-color: darkgray;
+    color: white;
+}

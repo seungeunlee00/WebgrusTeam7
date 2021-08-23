@@ -28,6 +28,7 @@
                 </script>
                     <input class="answer" type="button" value="A1. 스터디 플래너에 오늘 하루 공부할 계획을 세웁니다." onclick='localStorage.setItem("question9", 1);check = true;'>
                     <input class="answer" type = "button" value="A2. 계획은 안세우고 일단 닥치는 대로 공부합니다." onclick='localStorage.setItem("question9", 2);check = true;'>
+                    <script src="./Seolmoon.js"></script>
                 <div class="button_box">
                     <input class="prev_button" type="button" value="Prev" onclick='if(check != true){alert("please select the option");}else{location.href=`./Seolmoon${page - 1}.html`}'>
                     <input class="next_button" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href=`Seolmoon${page + 1}.html`}'>
