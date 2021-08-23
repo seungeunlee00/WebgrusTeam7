@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,9 +7,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel="stylesheet" href="resultStyle.css"/>
         <title>Mbti</title>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+        rel="stylesheet"
+      />
     </head>
     <body>
-
         <h2 id="sub">생기발랄한 장난꾸러기</h1>
         <h1 id="mbti" > ESFP </h1>
         <p id = "explain">
@@ -36,12 +38,13 @@
 
 
         <!-- 사용자의 MBTI 결과와 선택된 직업값 넘겨주기 위한 form 태그 -->
+        <div style="text-align: right;">
       	<form  method="GET" onsubmit='return check();' action="connect.php">
            <input type="hidden" name="hiddenMbti" id="hiddenMbti" value="mbti">
            <input type="hidden" name="hiddenJob" id="hiddenJob" value= "job">
            <input type="submit" class="NextButton" value="통계 보기"/>
        </form>
-
+    </div>
 
 
 
