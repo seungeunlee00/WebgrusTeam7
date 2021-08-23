@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q1</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
@@ -28,6 +29,7 @@
                 </script>
                     <input class="answer" type="button" value="A1. 우주 판타지를 담은 로맨스 영화" onclick='localStorage.setItem("question1", 1);check = true;'>
                     <input class="answer" type = "button" value="A2. 일상의 로맨스를 담은 영화" onclick='localStorage.setItem("question1", 2);check = true;'>
+                    <script src="./Seolmoon.js"></script>
                 <div class="button_box1">
                     <input class="next_button" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href=`Seolmoon${page + 1}.html`}'>
                 </div>

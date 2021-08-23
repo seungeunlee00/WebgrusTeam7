@@ -21,13 +21,13 @@
     */
 
       //E or I
-      if (localStorage.getItem("question1") == "1") {
+      if (localStorage.getItem("question4") == "2") {
         EorI += 1;
       }
-      if (localStorage.getItem("question2") == "1") {
+      if (localStorage.getItem("question7") == "1") {
         EorI += 1;
       }
-      if (localStorage.getItem("question3") == "1") {
+      if (localStorage.getItem("question11") == "2") {
         EorI += 1;
       }
 
@@ -36,13 +36,13 @@
       } else EorI = "I";
 
       //N or S
-      if (localStorage.getItem("question4") == "1") {
+      if (localStorage.getItem("question1") == "1") {
         NorS += 1;
       }
-      if (localStorage.getItem("question5") == "1") {
+      if (localStorage.getItem("question8") == "1") {
         NorS += 1;
       }
-      if (localStorage.getItem("question6") == "1") {
+      if (localStorage.getItem("question12") == "2") {
         NorS += 1;
       }
 
@@ -51,13 +51,13 @@
       } else NorS = "S";
 
       //T or F
-      if (localStorage.getItem("question7") == "1") {
+      if (localStorage.getItem("question3") == "2") {
         TorF += 1;
       }
-      if (localStorage.getItem("question8") == "1") {
+      if (localStorage.getItem("question6") == "2") {
         TorF += 1;
       }
-      if (localStorage.getItem("question9") == "1") {
+      if (localStorage.getItem("question10") == "2") {
         TorF += 1;
       }
 
@@ -66,13 +66,13 @@
       } else TorF = "F";
 
       //J or P
-      if (localStorage.getItem("question10") == "1") {
+      if (localStorage.getItem("question2") == "1") {
         JorP += 1;
       }
-      if (localStorage.getItem("question11") == "1") {
+      if (localStorage.getItem("question5") == "1") {
         JorP += 1;
       }
-      if (localStorage.getItem("question12") == "1") {
+      if (localStorage.getItem("question9") == "1") {
         JorP += 1;
       }
 
@@ -86,6 +86,8 @@
       // 최종 결과 확인
       alert(mbti);
       location.href = "./result.html?" + mbti;
+
+localStorage.clear();
     </script>
   </body>
 </html>

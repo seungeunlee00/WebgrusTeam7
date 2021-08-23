@@ -1,7 +1,7 @@
 var ans = document.getElementsByClassName("answer");
 
 function handleClick(event) {
-    
+
     if(event.target.classList[1] === "clicked") {
         event.target.classList.remove("clicked");
     } else {
@@ -18,4 +18,3 @@ function handleClick(event) {
         ans[i].addEventListener("click", handleClick);
     }
 
-    
