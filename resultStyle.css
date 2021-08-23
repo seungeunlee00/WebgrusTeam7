@@ -1,12 +1,16 @@
+* {
+	font-family: "Jua", sans-serif;
+}
+
 #sub {
-    font-size:25px;
+    font-size:35px;
     text-align: center;
     font-weight: normal;
     margin-top:60px;
 }
 
 #mbti {
-    font-size:35px;
+    font-size:40px;
     color:rgba(252, 237, 33, 0.877);
     text-align:center;
     margin-top:0;   
@@ -17,6 +21,28 @@ a {
 
 }
 
+p {
+	font-size: 20px;
+}
+
+label {
+	font-size: 20px;
+}
+
 #next {
     text-align:right;
+}
+
+.NextButton {
+	margin-right: 50px;
+	background-color: gray;
+	color: white;
+	padding: 8px 20px 8px 20px;
+	border: none;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	margin: 4px 2px;
+	border-radius: 10px;
+	-webkit-appearance: none;
 }

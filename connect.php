@@ -56,6 +56,10 @@
 <html>
 <head>
     <title>STATISTICS</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+			rel="stylesheet"
+		/>
     <meta charset="utf-8">
     <link rel="stylesheet" href="statistics_style.css">
 </head>
@@ -72,8 +76,8 @@
 
     <table>
         <th>NO.</th>
-        <th>직업</th>
-        <th>비율</th>
+        <th>Name</th>
+        <th>Value</th>
 <?php
 
   	$i = 1;
@@ -96,7 +100,22 @@
 
     <br><br><br><br><br><br>
     <div id="button">
-        <a href="#" class="button">링크 공유하기</a>
+        <a href="#" class="button" onclick="copy()">링크 공유하기</a>
     </div>
+
+<script>
+function copy() {
+	var url = "http://118.67.133.92/start/start.html";
+	var textarea = document.createElement("textarea");
+	document.body.appendChild(textarea);
+	textarea.value = url;
+	textarea.select();
+	document.execCommand("copy");
+	document.body.removeChild(textarea);
+	alert("URL이 복사되었습니다.");
+}
+</script>
+
 </body>
 </html>
+

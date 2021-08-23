@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q1</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
@@ -18,20 +19,23 @@
         <div class="top_box">
             <p>MBTI별 추천 직업</p>
         </div>
-        <div class="question_box"> Q1. 토요일 아침에 일어난 당신! 영화를 보려고 한다. 어떤 영화?</div>
+        <div class="question_box"> Q1. 토요일 아침에 일어난 당신! 영화를 보려고 한다. 어떤 영
+화?</div>
 
-            <form>
-                <div class="answer_box">
-                    <script>
-                        var check = false;
-                    </script>
-                        <input class="answer" type="button" value="A1. 우주 판타지를 담은 로맨스 영화" onclick='localStorage.setItem("question1", 1);check = true;'> 
-                        <input class="answer" type = "button" value="A2. 일상의 로맨스를 담은 영화" onclick='localStorage.setItem("question1", 2);check = true;'>
-                        <script src="./Seolmoon.js"></script>
-                    <div class="button_box1">
-                        <input class="next_button" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href="Seolmoon2.html"}'>
-                    </div>
+        <form>
+            <div class="answer_box">
+                <script>
+                    var check = false;
+                    var page = 1;
+                </script>
+                    <input class="answer" type="button" value="A1. 우주 판타지를 담은 로맨스 영화" onclick='localStorage.setItem("question1", 1);check = true;'>
+                    <input class="answer" type = "button" value="A2. 일상의 로맨스를 담은 영화" onclick='localStorage.setItem("question1", 2);check = true;'>
+                    <script src="./Seolmoon.js"></script>
+                <div class="button_box1">
+                    <input class="next_button" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href=`Seolmoon${page + 1}.html`}'>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
+    </div>
 </body>
+
